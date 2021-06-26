@@ -3,7 +3,7 @@ export const getProgramsService = (
   launch_success,
   land_success
 ) => {
-  let url = "https://api.spacexdata.com/v3/launches?limit=100";
+  let url = `${process.env.REACT_APP_API_URL}/launches?limit=100`;
   if (launch_year) {
     url += `&launch_year=${launch_year}`;
   }
